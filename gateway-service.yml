@@ -7,12 +7,5 @@ spring:
           predicates:
             - Path=/users/**
 
-logging:
-  level:
-    org.springframework.cloud.gateway: TRACE
-    org.springframework.http.server.reactive: DEBUG
-    org.springframework.web.reactive: DEBUG
-    reactor.ipc.netty: DEBUG
-
 server:
-  port: 9000
+  port: ${SERVER_PORT:9000}

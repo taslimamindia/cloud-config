@@ -1,7 +1,11 @@
 server:
   port: ${SERVER_PORT:9001}
 keycloak:
-  realms: cec
-  ressource: user-service
+  realm: realm-cec
   auth-server-url: http://localhost:8080/auth
+  ssl-required: external
+  resource: user-service
+  credentials:
+    secret: f562a776-cc87-45ce-9e45-48f2bc4f1c7e
+  use-resource-role-mappings: true
   bearer-only: true
